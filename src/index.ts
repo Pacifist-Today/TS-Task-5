@@ -2,6 +2,10 @@
 // У кожної фігури є загальнодоступні властивості - колір і назва, які не можна змінювати після створення.
 // У Square і Rectangle зі свого боку є ще додатковий метод print, який виводить рядок із формулою розрахунку площі
 
+interface IPrint {
+    print(): string
+}
+
 class Circle {
     private _name: string
     private _color: string
@@ -20,7 +24,7 @@ class Circle {
     }
 }
 
-class Rectangle {
+class Rectangle implements IPrint {
     private _name: string
     private _color: string
     private _length: number
@@ -44,7 +48,7 @@ class Rectangle {
     }
 }
 
-class Square {
+class Square implements IPrint {
     private _name: string
     private _color: string
     private _side: number
