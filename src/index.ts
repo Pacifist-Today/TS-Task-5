@@ -11,7 +11,7 @@ class Shape {
         this._color = color
     }
 
-    calculateArea(): number {return 0}
+    calculateArea(): void {}
 }
 
 interface IPrint {
